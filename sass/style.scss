@@ -1,0 +1,112 @@
+$primary-color: rgba(154, 236, 219,1.0);
+$width-div: 80%;
+$font: 'Raleway', sans-serif;
+$width-image: 40%;
+body{
+    margin: 0;
+    background-color: $primary-color;
+    font-family: $font;
+}
+%div{
+    width: $width-div;
+    background-color: white;
+    margin: 40px 0;
+    box-shadow: 0.5px 0.5px 5px #000;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+
+    &:hover{
+        transform: scale(1.1);
+        transition: 0.4s;
+    }
+    img{
+        width: $width-image;
+    }
+    h2{
+        font-size: 2em;
+    }
+    p{
+        width: 30%;
+        text-align: justify;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    height: 100vh;
+    .presentation{
+        @extend %div;
+        p{
+            float: right;
+            margin-right: 30px;
+        }
+    }
+    .apple{
+        @extend %div;
+        h2, img{
+            order: 2;
+        }
+    }
+    .next{
+        @extend %div;
+        h2{
+            order: 2;
+        }
+    }
+    .mort{
+        @extend %div;
+        img{
+            order: 2;
+        }
+    }
+    .citations{
+        width: $width-div;
+        background-color: white;
+        margin: 40px 0;
+        box-shadow: 0.5px 0.5px 5px #000;
+        padding: 40px;
+        border-radius: 5px;
+        h2{
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        blockquote{
+            width: 50%;
+            font-style: italic;
+        }
+
+        blockquote::before{
+            content: '❝';
+        }
+        blockquote::after{
+            content: '❞';
+            font-style: italic;
+            font-weight: lighter;
+        }
+        .blockquotes-e{
+            display: flex;
+        }
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+        h2{
+            font-size: 2em;
+        }
+    }
+    .author{
+        font-style: italic;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+

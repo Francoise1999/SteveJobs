@@ -1,0 +1,93 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-color: #9aecdb;
+  font-family: "Raleway", sans-serif;
+}
+
+.container .mort, .container .next, .container .apple, .container .presentation {
+  width: 80%;
+  background-color: white;
+  margin: 40px 0;
+  box-shadow: 0.5px 0.5px 5px #000;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+.container .mort:hover, .container .next:hover, .container .apple:hover, .container .presentation:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.container .mort img, .container .next img, .container .apple img, .container .presentation img {
+  width: 40%;
+}
+.container .mort h2, .container .next h2, .container .apple h2, .container .presentation h2 {
+  font-size: 2em;
+}
+.container .mort p, .container .next p, .container .apple p, .container .presentation p {
+  width: 30%;
+  text-align: justify;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  height: 100vh;
+}
+.container .presentation p {
+  float: right;
+  margin-right: 30px;
+}
+.container .apple h2, .container .apple img {
+  order: 2;
+}
+.container .next h2 {
+  order: 2;
+}
+.container .mort img {
+  order: 2;
+}
+.container .citations {
+  width: 80%;
+  background-color: white;
+  margin: 40px 0;
+  box-shadow: 0.5px 0.5px 5px #000;
+  padding: 40px;
+  border-radius: 5px;
+}
+.container .citations h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.container .citations blockquote {
+  width: 50%;
+  font-style: italic;
+}
+.container .citations blockquote::before {
+  content: "❝";
+}
+.container .citations blockquote::after {
+  content: "❞";
+  font-style: italic;
+  font-weight: lighter;
+}
+.container .citations .blockquotes-e {
+  display: flex;
+}
+.container .citations:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.container .citations h2 {
+  font-size: 2em;
+}
+.container .author {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
